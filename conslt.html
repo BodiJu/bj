@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Body Jul</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="blur-background"></div>
+    <section class="top-nav">
+        <div class="logo">
+            <img src="IMG_6129.PNG" alt="">
+        </div>
+        <input id="menu-toggle" type="checkbox" />
+        <label class='menu-button-container' for="menu-toggle">
+            <div class='menu-button'></div>
+        </label>
+        <ul class="menu">
+            <li><a href="/index.html">Головна</a></li>
+            <li><a href="/selection.html">Супровід</a></li>
+            <li><a href="/conslt.html" class="active">Консультація</a></li>
+            <li><a href="/book.html">Книга</a></li>
+            <li><a href="/contacts.html">Контакти</a></li>
+        </ul>
+    </section>
+    <form id="form" class="form">
+        <div class="form-inner">
+            <h3>Консультация</h3>
+            <label for="username">Имя Фамилия</label>
+            <input type="text" id="username" name="username">
+            <label for="contacts">Ваш телеграм/инстаграм</label>
+            <input id="contacts" type="text" name="contacts">
+            <label for="age">Возраст</label>
+            <input type="number" id="age" name="age">
+            <label for="expectations">Ожидания от тренировок</label>
+            <textarea name="expectations" id="expectations" placeholder="Наприклад: похудати"></textarea>
+            <input type="submit" value="Отправить">
+        </div>
+    </form>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../form.js"></script>
+</body>
+</html>
