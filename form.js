@@ -2,10 +2,11 @@ const token = "6735229668:AAH0brSmSkwbv3wHSZF0pHY9oB3zbeSPL4M" // Replace with y
 const chat_id = "-1002083149793" // Replace with your group's chat ID
 const URI_API = `https://api.telegram.org/bot${token}/sendMessage`;
 
-const clearInputs = (name, contacts, age) => {
+const clearInputs = (name, contacts, age, expect) => {
     name.value = ''
     contacts.value = ''
     age.value = ''
+    expect.value = ''
 }
 
 document.getElementById('form').addEventListener('submit', function(event) {
@@ -21,7 +22,7 @@ document.getElementById('form').addEventListener('submit', function(event) {
         text: message
     })
     .then(response => {
-        clearInputs(this.username, this.contacts, this.age)
+        clearInputs(this.username, this.contacts, this.age, this.expectations)
     })
     .catch(error => {
         console.error("Error sending message:", error);
